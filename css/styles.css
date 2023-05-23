@@ -1,0 +1,236 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* GENERAL STYLES */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font: 1.5rem 'Rubik', sans-serif;
+    min-height: 100vh;
+    background-color: #1e3b3b;
+    display: flex;
+    flex-direction: column;
+}
+
+header, footer {
+    position: sticky;
+    background-color: #091919;
+    color: whitesmoke;
+    text-align: center;
+}
+
+header {
+    top: 0;
+}
+
+nav {
+    background-color: white;
+    padding: 0.5rem;
+    border-bottom: 2px solid black;
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+nav a:link, nav a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+nav :is(a:hover, a:focus) {
+    color: gray;
+}
+
+nav a:active {
+    color: red;
+}
+
+main {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+footer {
+    bottom: 0;
+}
+
+footer p::after {
+    content: "*This project takes inspiration from the Responsive Web Design course taught by freeCodeCamp*";
+    display: block;
+    font-size: 40%;
+    font-style: italic;
+    font-weight: 100;
+    padding-bottom: 5px;
+}
+
+footer :is(a:link, a:visited) {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+footer a:hover {
+    color: rgb(160, 155, 155);
+}
+
+footer a:active {
+    color: #f00;
+}
+
+/* PROFILE CARD */
+.card {
+    scroll-margin-top: 8rem;
+    width: min(100%, 350px);
+    background-color: rgba(133, 132, 132, 0.514);
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card:target {
+    border-color: rebeccapurple;
+}
+
+.card figure {
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    border: 5px double #000;
+    border-radius: 50%;
+}
+
+.card img:not([alt]) {
+    border: 10px solid rgb(27, 116, 107);
+}
+
+.card figcaption {
+    font-weight: bolder;
+    font-size: 2rem;
+    margin: 0.5rem;
+    text-align: center;
+}
+
+/* .card:nth-child(1), figcaption::before {
+    content: "🧑🏻‍💻";
+    display: block;
+} */
+
+/* .card:nth-child(2), figcaption::before {
+    content: "🧑🏻‍💼";
+    display: block;
+}
+
+.card:nth-child(3), figcaption::before {
+    content: "🧑🏻‍🍳";
+    display: block;
+} */
+
+.card p {
+    text-align: center;
+}
+
+/* SMALL */
+@media screen and (min-width: 576px) {
+    main {
+        flex-flow: row wrap;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    .card {
+        width: min(100%, 400px);
+    }
+
+    .card:last-child {
+        order: -1;
+    }
+}
+
+/* MEDIUM */
+@media screen and (min-width:768px) {
+
+    nav {
+        display: none;
+    }
+
+    .card {
+        width: min(100%, 325px);
+    }
+
+    .card figure {
+        flex-direction: column-reverse;
+    }
+
+    .card figcaption {
+        margin-top: 0;
+    }
+
+    .card p {
+        margin-top: 0.7rem;
+    }
+
+}
+
+/* LARGE */
+@media screen and (min-width: 992px) {
+    .card {
+        width: min(100%, 400px);
+    }
+
+    .card:nth-child(2) {
+        order: -1;
+    }
+}
+
+/* XL */
+@media screen and (min-width: 1200px) {
+    .card {
+        width: min(calc(33% - 1rem), 500px);
+    }
+
+    .nowrap {
+        white-space: nowrap;
+    }
+ }
+ /* MOBILE LANDSCAPE */
+ @media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+
+
+    main {
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-items: stretch;
+    }
+
+    .card {
+        font-size: 1.25rem;
+        width: min(calc(33% - 0.25rem), 200px);
+    }
+
+ }
