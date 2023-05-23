@@ -68,7 +68,7 @@ main {
 }
 
 footer {
-    position: static;
+    position: sticky;
     bottom: 0;
 }
 
@@ -152,7 +152,7 @@ footer a:active {
 }
 
 /* SMALL */
-@media screen and (max-width: 576px) {
+@media screen and (min-width: 576px) {
     nav {
         justify-content: space-around;
     }
