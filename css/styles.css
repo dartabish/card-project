@@ -123,21 +123,6 @@ footer a:active {
     text-align: center;
 }
 
-/* .card:nth-child(1), figcaption::before {
-    content: "🧑🏻‍💻";
-    display: block;
-} */
-
-/* .card:nth-child(2), figcaption::before {
-    content: "🧑🏻‍💼";
-    display: block;
-}
-
-.card:nth-child(3), figcaption::before {
-    content: "🧑🏻‍🍳";
-    display: block;
-} */
-
 .card p {
     text-align: center;
 }
