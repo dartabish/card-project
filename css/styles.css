@@ -151,7 +151,7 @@ footer a:active {
 }
 
 /* SMALL */
-@media screen and (min-width: 576px) {
+@media screen and (max-width: 576px) {
     nav {
         justify-content: space-around;
     }
